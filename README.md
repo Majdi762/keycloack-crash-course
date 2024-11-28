@@ -62,3 +62,6 @@ Please make sure to update tests as appropriate.
 ## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
+
+## Credits
+This project is inspired by the Keycloak Integration with Spring Boot 3 course created by Ali Bouali. The course provided an excellent foundation for learning Keycloak and its integration with Spring Boot.
