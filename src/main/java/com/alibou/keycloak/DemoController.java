@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
     @GetMapping
-    @PreAuthorize("hasRole('client_user')")
+    @PreAuthorize("hasRole('client-user')")
     public String hello() {
         return "Hello from Spring boot & Keycloak";
     }
 
     @GetMapping("/hello-2")
-    @PreAuthorize("hasRole('client_admin')")
+    @PreAuthorize("hasRole('client-admin')")
     public String hello2() {
         return "Hello from Spring boot & Keycloak - ADMIN";
     }

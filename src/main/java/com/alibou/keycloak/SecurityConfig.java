@@ -26,12 +26,14 @@ public class SecurityConfig {
                 .authorizeHttpRequests()
                     .anyRequest()
                         .authenticated();
-
+//        Indique à Spring Security que l'application utilise OAuth2 comme mécanisme
+//        d'authentification, avec des JWT (JSON Web Tokens).
         http
                 .oauth2ResourceServer()
                     .jwt()
                         .jwtAuthenticationConverter(jwtAuthConverter);
-
+//        Le mode STATELESS signifie que Spring Security n'utilise pas de sessions côté
+//        serveur pour stocker des informations sur les utilisateurs authentifiés.
         http
                 .sessionManagement()
                     .sessionCreationPolicy(STATELESS);
